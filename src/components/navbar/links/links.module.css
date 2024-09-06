@@ -1,3 +1,48 @@
 .container{
   display: flex;
 }
+
+.button{
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  background-color: lightblue;
+  color: var(--bg);
+  cursor: pointer;
+  border: none;
+}
+
+.links{
+  display: flex;
+}
+
+.menuButton,
+.mobileLinks {
+  display: none;
+}
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobileLinks {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 20%;
+    height: calc(100vh - 100px);
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
